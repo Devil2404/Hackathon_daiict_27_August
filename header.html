@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="header.css" />
+</head>
+
+<body>
+    <header>
+        <div class="hc">
+            <div class="left">
+                <h2><span id="ch">PHAM INSURANCES</span></h2>
+            </div>
+            <div class="right" id="right">
+                <li id="n2"><a href="#">MyProfile</a></li>
+                <li id="n3"><a href="#">Services</a></li>
+                <li id="n4"><a href="#">TermsAndConditions</a></li>
+                <li id="n1"><a href="#">SignUp</a></li>
+                <li id="n5"><a href="#">AboutUs</a></li>
+            </div>
+        </div>
+    </header>
+    <div class="hidden" id="hidden">
+        <li id="n2"><a href="#">My Profile</a></li>
+        <li id="n3"><a href="#">Gyms</a></li>
+        <li id="n4"><a href="#">Terms And Conditions</a></li>
+        <li id="n1"><a href="#">Sign Up</a></li>
+        <li id="n5"><a href="#">About Us</a></li>
+    </div>
+    <script>
+        let x = window.matchMedia("(max-width:1000px)");
+        let a = document.getElementById("right");
+        let b = document.getElementById("hidden");
+
+        let count = 0;
+        a.addEventListener("click", () => {
+            if (x.matches) {
+                count++;
+                if (count % 2 != 0) {
+                    a.style.background = "url(https://i.ibb.co/rt3HybH/close.png)no-repeat center center/cover";
+                    a.style.backgroundSize = "25px";
+                    b.style.height = "100vh";
+                    b.style.opacity = "1";
+                    b.style.fontSize = "1.5em";
+                } else {
+                    a.style.background = "url(https://i.ibb.co/HrfVRcx/menu.png)no-repeat center center/cover";
+                    a.style.backgroundSize = "30px";
+                    b.style.height = "0vh";
+                    b.style.opacity = "0";
+                    b.style.fontSize = "0px";
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
