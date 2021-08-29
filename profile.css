@@ -68,6 +68,7 @@
         background-size: 30px;
         background-position: center;
         cursor: pointer;
+        z-index:2;
     }
 }
 
